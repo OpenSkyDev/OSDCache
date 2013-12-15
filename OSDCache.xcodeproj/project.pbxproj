@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		94E3CA55185D9AB6000DF159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA54185D9AB6000DF159 /* Foundation.framework */; };
-		94E3CA5A185D9AB6000DF159 /* OSDCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94E3CA59185D9AB6000DF159 /* OSDCache.h */; };
-		94E3CA5C185D9AB6000DF159 /* OSDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA5B185D9AB6000DF159 /* OSDCache.m */; };
 		94E3CA63185D9AB6000DF159 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA62185D9AB6000DF159 /* XCTest.framework */; };
 		94E3CA64185D9AB6000DF159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA54185D9AB6000DF159 /* Foundation.framework */; };
 		94E3CA66185D9AB6000DF159 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA65185D9AB6000DF159 /* UIKit.framework */; };
 		94E3CA69185D9AB6000DF159 /* libOSDCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA51185D9AB6000DF159 /* libOSDCache.a */; };
 		94E3CA6F185D9AB6000DF159 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94E3CA6D185D9AB6000DF159 /* InfoPlist.strings */; };
 		94E3CA71185D9AB6000DF159 /* OSDCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA70185D9AB6000DF159 /* OSDCacheTests.m */; };
+		94E3CA7C185D9AD8000DF159 /* OSDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA7B185D9AD8000DF159 /* OSDCache.m */; };
+		94E3CA7E185DA66F000DF159 /* OSDMemCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA7D185DA66F000DF159 /* OSDMemCacheTests.m */; };
+		94E3CA81185DA6C5000DF159 /* OSDCacheTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA80185DA6C5000DF159 /* OSDCacheTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				94E3CA5A185D9AB6000DF159 /* OSDCache.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +45,17 @@
 		94E3CA51185D9AB6000DF159 /* libOSDCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSDCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E3CA54185D9AB6000DF159 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94E3CA58185D9AB6000DF159 /* OSDCache-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSDCache-Prefix.pch"; sourceTree = "<group>"; };
-		94E3CA59185D9AB6000DF159 /* OSDCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSDCache.h; sourceTree = "<group>"; };
-		94E3CA5B185D9AB6000DF159 /* OSDCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSDCache.m; sourceTree = "<group>"; };
 		94E3CA61185D9AB6000DF159 /* OSDCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSDCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E3CA62185D9AB6000DF159 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		94E3CA65185D9AB6000DF159 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		94E3CA6C185D9AB6000DF159 /* OSDCacheTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OSDCacheTests-Info.plist"; sourceTree = "<group>"; };
 		94E3CA6E185D9AB6000DF159 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		94E3CA70185D9AB6000DF159 /* OSDCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSDCacheTests.m; sourceTree = "<group>"; };
+		94E3CA7A185D9AD8000DF159 /* OSDCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDCache.h; sourceTree = "<group>"; };
+		94E3CA7B185D9AD8000DF159 /* OSDCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDCache.m; sourceTree = "<group>"; };
+		94E3CA7D185DA66F000DF159 /* OSDMemCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDMemCacheTests.m; sourceTree = "<group>"; };
+		94E3CA7F185DA6C5000DF159 /* OSDCacheTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDCacheTestCase.h; sourceTree = "<group>"; };
+		94E3CA80185DA6C5000DF159 /* OSDCacheTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDCacheTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +113,8 @@
 		94E3CA56185D9AB6000DF159 /* OSDCache */ = {
 			isa = PBXGroup;
 			children = (
-				94E3CA59185D9AB6000DF159 /* OSDCache.h */,
-				94E3CA5B185D9AB6000DF159 /* OSDCache.m */,
+				94E3CA7A185D9AD8000DF159 /* OSDCache.h */,
+				94E3CA7B185D9AD8000DF159 /* OSDCache.m */,
 				94E3CA57185D9AB6000DF159 /* Supporting Files */,
 			);
 			path = OSDCache;
@@ -129,7 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				94E3CA70185D9AB6000DF159 /* OSDCacheTests.m */,
+				94E3CA7D185DA66F000DF159 /* OSDMemCacheTests.m */,
 				94E3CA6B185D9AB6000DF159 /* Supporting Files */,
+				94E3CA7F185DA6C5000DF159 /* OSDCacheTestCase.h */,
+				94E3CA80185DA6C5000DF159 /* OSDCacheTestCase.m */,
 			);
 			path = OSDCacheTests;
 			sourceTree = "<group>";
@@ -224,7 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94E3CA5C185D9AB6000DF159 /* OSDCache.m in Sources */,
+				94E3CA7C185D9AD8000DF159 /* OSDCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E3CA81185DA6C5000DF159 /* OSDCacheTestCase.m in Sources */,
 				94E3CA71185D9AB6000DF159 /* OSDCacheTests.m in Sources */,
+				94E3CA7E185DA66F000DF159 /* OSDMemCacheTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
