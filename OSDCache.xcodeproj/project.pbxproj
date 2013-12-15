@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94E3CA55185D9AB6000DF159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA54185D9AB6000DF159 /* Foundation.framework */; };
+		94E3CA5A185D9AB6000DF159 /* OSDCache.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94E3CA59185D9AB6000DF159 /* OSDCache.h */; };
+		94E3CA5C185D9AB6000DF159 /* OSDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA5B185D9AB6000DF159 /* OSDCache.m */; };
+		94E3CA63185D9AB6000DF159 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA62185D9AB6000DF159 /* XCTest.framework */; };
+		94E3CA64185D9AB6000DF159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA54185D9AB6000DF159 /* Foundation.framework */; };
+		94E3CA66185D9AB6000DF159 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA65185D9AB6000DF159 /* UIKit.framework */; };
+		94E3CA69185D9AB6000DF159 /* libOSDCache.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA51185D9AB6000DF159 /* libOSDCache.a */; };
+		94E3CA6F185D9AB6000DF159 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94E3CA6D185D9AB6000DF159 /* InfoPlist.strings */; };
+		94E3CA71185D9AB6000DF159 /* OSDCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA70185D9AB6000DF159 /* OSDCacheTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		94E3CA67185D9AB6000DF159 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94E3CA49185D9AB6000DF159 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94E3CA50185D9AB6000DF159;
+			remoteInfo = OSDCache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		94E3CA4F185D9AB6000DF159 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				94E3CA5A185D9AB6000DF159 /* OSDCache.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		94E3CA51185D9AB6000DF159 /* libOSDCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSDCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E3CA54185D9AB6000DF159 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		94E3CA58185D9AB6000DF159 /* OSDCache-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSDCache-Prefix.pch"; sourceTree = "<group>"; };
+		94E3CA59185D9AB6000DF159 /* OSDCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSDCache.h; sourceTree = "<group>"; };
+		94E3CA5B185D9AB6000DF159 /* OSDCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSDCache.m; sourceTree = "<group>"; };
+		94E3CA61185D9AB6000DF159 /* OSDCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSDCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E3CA62185D9AB6000DF159 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		94E3CA65185D9AB6000DF159 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		94E3CA6C185D9AB6000DF159 /* OSDCacheTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OSDCacheTests-Info.plist"; sourceTree = "<group>"; };
+		94E3CA6E185D9AB6000DF159 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		94E3CA70185D9AB6000DF159 /* OSDCacheTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSDCacheTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94E3CA4E185D9AB6000DF159 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E3CA55185D9AB6000DF159 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94E3CA5E185D9AB6000DF159 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E3CA63185D9AB6000DF159 /* XCTest.framework in Frameworks */,
+				94E3CA69185D9AB6000DF159 /* libOSDCache.a in Frameworks */,
+				94E3CA66185D9AB6000DF159 /* UIKit.framework in Frameworks */,
+				94E3CA64185D9AB6000DF159 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94E3CA48185D9AB6000DF159 = {
+			isa = PBXGroup;
+			children = (
+				94E3CA56185D9AB6000DF159 /* OSDCache */,
+				94E3CA6A185D9AB6000DF159 /* OSDCacheTests */,
+				94E3CA53185D9AB6000DF159 /* Frameworks */,
+				94E3CA52185D9AB6000DF159 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94E3CA52185D9AB6000DF159 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94E3CA51185D9AB6000DF159 /* libOSDCache.a */,
+				94E3CA61185D9AB6000DF159 /* OSDCacheTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94E3CA53185D9AB6000DF159 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94E3CA54185D9AB6000DF159 /* Foundation.framework */,
+				94E3CA62185D9AB6000DF159 /* XCTest.framework */,
+				94E3CA65185D9AB6000DF159 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94E3CA56185D9AB6000DF159 /* OSDCache */ = {
+			isa = PBXGroup;
+			children = (
+				94E3CA59185D9AB6000DF159 /* OSDCache.h */,
+				94E3CA5B185D9AB6000DF159 /* OSDCache.m */,
+				94E3CA57185D9AB6000DF159 /* Supporting Files */,
+			);
+			path = OSDCache;
+			sourceTree = "<group>";
+		};
+		94E3CA57185D9AB6000DF159 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94E3CA58185D9AB6000DF159 /* OSDCache-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94E3CA6A185D9AB6000DF159 /* OSDCacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				94E3CA70185D9AB6000DF159 /* OSDCacheTests.m */,
+				94E3CA6B185D9AB6000DF159 /* Supporting Files */,
+			);
+			path = OSDCacheTests;
+			sourceTree = "<group>";
+		};
+		94E3CA6B185D9AB6000DF159 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				94E3CA6C185D9AB6000DF159 /* OSDCacheTests-Info.plist */,
+				94E3CA6D185D9AB6000DF159 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94E3CA50185D9AB6000DF159 /* OSDCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94E3CA74185D9AB6000DF159 /* Build configuration list for PBXNativeTarget "OSDCache" */;
+			buildPhases = (
+				94E3CA4D185D9AB6000DF159 /* Sources */,
+				94E3CA4E185D9AB6000DF159 /* Frameworks */,
+				94E3CA4F185D9AB6000DF159 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSDCache;
+			productName = OSDCache;
+			productReference = 94E3CA51185D9AB6000DF159 /* libOSDCache.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		94E3CA60185D9AB6000DF159 /* OSDCacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94E3CA77185D9AB6000DF159 /* Build configuration list for PBXNativeTarget "OSDCacheTests" */;
+			buildPhases = (
+				94E3CA5D185D9AB6000DF159 /* Sources */,
+				94E3CA5E185D9AB6000DF159 /* Frameworks */,
+				94E3CA5F185D9AB6000DF159 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94E3CA68185D9AB6000DF159 /* PBXTargetDependency */,
+			);
+			name = OSDCacheTests;
+			productName = OSDCacheTests;
+			productReference = 94E3CA61185D9AB6000DF159 /* OSDCacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94E3CA49185D9AB6000DF159 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "OpenSky, LLC";
+			};
+			buildConfigurationList = 94E3CA4C185D9AB6000DF159 /* Build configuration list for PBXProject "OSDCache" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 94E3CA48185D9AB6000DF159;
+			productRefGroup = 94E3CA52185D9AB6000DF159 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94E3CA50185D9AB6000DF159 /* OSDCache */,
+				94E3CA60185D9AB6000DF159 /* OSDCacheTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94E3CA5F185D9AB6000DF159 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E3CA6F185D9AB6000DF159 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94E3CA4D185D9AB6000DF159 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E3CA5C185D9AB6000DF159 /* OSDCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94E3CA5D185D9AB6000DF159 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94E3CA71185D9AB6000DF159 /* OSDCacheTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94E3CA68185D9AB6000DF159 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94E3CA50185D9AB6000DF159 /* OSDCache */;
+			targetProxy = 94E3CA67185D9AB6000DF159 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		94E3CA6D185D9AB6000DF159 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94E3CA6E185D9AB6000DF159 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		94E3CA72185D9AB6000DF159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		94E3CA73185D9AB6000DF159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		94E3CA75185D9AB6000DF159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OSDCache.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSDCache/OSDCache-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		94E3CA76185D9AB6000DF159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/OSDCache.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSDCache/OSDCache-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		94E3CA78185D9AB6000DF159 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSDCache/OSDCache-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "OSDCacheTests/OSDCacheTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		94E3CA79185D9AB6000DF159 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSDCache/OSDCache-Prefix.pch";
+				INFOPLIST_FILE = "OSDCacheTests/OSDCacheTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94E3CA4C185D9AB6000DF159 /* Build configuration list for PBXProject "OSDCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E3CA72185D9AB6000DF159 /* Debug */,
+				94E3CA73185D9AB6000DF159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94E3CA74185D9AB6000DF159 /* Build configuration list for PBXNativeTarget "OSDCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E3CA75185D9AB6000DF159 /* Debug */,
+				94E3CA76185D9AB6000DF159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		94E3CA77185D9AB6000DF159 /* Build configuration list for PBXNativeTarget "OSDCacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E3CA78185D9AB6000DF159 /* Debug */,
+				94E3CA79185D9AB6000DF159 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94E3CA49185D9AB6000DF159 /* Project object */;
+}
