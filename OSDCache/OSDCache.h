@@ -48,6 +48,7 @@ OBJC_EXTERN float_t const OSDCacheVersionNumber;
 
 #pragma mark -
 #pragma mark - Metadata
+- (void)countObjectsInCache:(void(^)(NSUInteger count))cache;
 - (NSUInteger)objectsInCache;
 
 #pragma mark -

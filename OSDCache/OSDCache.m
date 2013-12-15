@@ -212,6 +212,13 @@ static id _OSDCache_Tmp  = nil;
 - (NSUInteger)objectsInCache {
     return 0;
 }
+- (void)countObjectsInCache:(void(^)(NSUInteger count))cache {
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    dispatch_async(queue, ^{
+        NSUInteger count = [self objectsInCache];
+        cache(count);
+    });
+}
 
 @end
 
@@ -233,6 +240,10 @@ static id _OSDCache_Tmp  = nil;
 - (BOOL)performWrite:(id)write forKey:(NSString *)key error:(NSError **)error {
     NSString *path = [[[self cachePath] stringByAppendingPathComponent:key] stringByAppendingPathExtension:@"dat"];
     return [write writeToFile:path options:NSDataWritingAtomic error:error];
+}
+
+- (NSUInteger)objectsInCache {
+    return [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:[self cachePath] error:nil] count];
 }
 
 @end
