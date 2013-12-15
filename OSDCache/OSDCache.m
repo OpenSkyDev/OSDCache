@@ -67,6 +67,9 @@ static id _OSDCache_Tmp  = nil;
 }
 
 + (void)resetCacheFromTests {
+    [_OSDCache_Disk clear];
+    [_OSDCache_Mem clear];
+    [_OSDCache_Tmp clear];
     _OSDCache_Disk = nil;
     _OSDCache_Mem = nil;
     _OSDCache_Tmp = nil;
@@ -84,7 +87,8 @@ static id _OSDCache_Tmp  = nil;
 #pragma mark -
 #pragma mark - Cache Management
 - (void)clear {
-    @throw [NSException exceptionWithName:OSDCacheException reason:@"Needs to be overriden" userInfo:nil];
+    [self.tempMemCache removeAllObjects];
+    [self performCacheClear];
 }
 
 #pragma mark -
@@ -199,10 +203,37 @@ static id _OSDCache_Tmp  = nil;
     [NSException raise:OSDCacheException format:@"Override %s in subclass",__PRETTY_FUNCTION__];
     return NO;
 }
+- (void)performCacheClear {
+    [NSException raise:OSDCacheException format:@"Needs to be overriden"];
+}
+
+#pragma mark -
+#pragma mark - Metadata
+- (NSUInteger)objectsInCache {
+    return 0;
+}
 
 @end
 
 @implementation OSDDiskCache
+
+- (void)performCacheClear {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:[self cachePath]]) {
+        NSError *clearError = nil;
+        if (![[NSFileManager defaultManager] removeItemAtPath:[self cachePath] error:&clearError]) {
+            NSLog(@"Clear cache error: %@",clearError);
+        }
+    }
+}
+
+- (id)performReadForKey:(NSString *)key {
+    NSString *path = [[[self cachePath] stringByAppendingPathComponent:key] stringByAppendingPathExtension:@"dat"];
+    return [NSData dataWithContentsOfFile:path];
+}
+- (BOOL)performWrite:(id)write forKey:(NSString *)key error:(NSError **)error {
+    NSString *path = [[[self cachePath] stringByAppendingPathComponent:key] stringByAppendingPathExtension:@"dat"];
+    return [write writeToFile:path options:NSDataWritingAtomic error:error];
+}
 
 @end
 
@@ -213,6 +244,9 @@ static id _OSDCache_Tmp  = nil;
 }
 - (BOOL)performWrite:(id)write forKey:(NSString *)key error:(NSError **)error {
     return YES;
+}
+- (void)performCacheClear {
+    
 }
 
 @end
@@ -234,7 +268,7 @@ static id _OSDCache_Tmp  = nil;
 }
 
 - (void)dealloc {
-    [[NSFileManager defaultManager] removeItemAtPath:[self cachePath] error:nil];
+    [self clear];
 }
 
 @end

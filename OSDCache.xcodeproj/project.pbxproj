@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94AF160E185E59EE0049E422 /* OSDTmpCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AF160D185E59EE0049E422 /* OSDTmpCacheTests.m */; };
 		94E3CA55185D9AB6000DF159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA54185D9AB6000DF159 /* Foundation.framework */; };
 		94E3CA63185D9AB6000DF159 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA62185D9AB6000DF159 /* XCTest.framework */; };
 		94E3CA64185D9AB6000DF159 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E3CA54185D9AB6000DF159 /* Foundation.framework */; };
@@ -17,6 +18,7 @@
 		94E3CA7C185D9AD8000DF159 /* OSDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA7B185D9AD8000DF159 /* OSDCache.m */; };
 		94E3CA7E185DA66F000DF159 /* OSDMemCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA7D185DA66F000DF159 /* OSDMemCacheTests.m */; };
 		94E3CA81185DA6C5000DF159 /* OSDCacheTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA80185DA6C5000DF159 /* OSDCacheTestCase.m */; };
+		94E3CA83185E5702000DF159 /* OSDDiskCacheTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3CA82185E5702000DF159 /* OSDDiskCacheTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		94AF160D185E59EE0049E422 /* OSDTmpCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDTmpCacheTests.m; sourceTree = "<group>"; };
 		94E3CA51185D9AB6000DF159 /* libOSDCache.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOSDCache.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E3CA54185D9AB6000DF159 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94E3CA58185D9AB6000DF159 /* OSDCache-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSDCache-Prefix.pch"; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		94E3CA7D185DA66F000DF159 /* OSDMemCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDMemCacheTests.m; sourceTree = "<group>"; };
 		94E3CA7F185DA6C5000DF159 /* OSDCacheTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSDCacheTestCase.h; sourceTree = "<group>"; };
 		94E3CA80185DA6C5000DF159 /* OSDCacheTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDCacheTestCase.m; sourceTree = "<group>"; };
+		94E3CA82185E5702000DF159 /* OSDDiskCacheTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSDDiskCacheTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 			children = (
 				94E3CA70185D9AB6000DF159 /* OSDCacheTests.m */,
 				94E3CA7D185DA66F000DF159 /* OSDMemCacheTests.m */,
+				94E3CA82185E5702000DF159 /* OSDDiskCacheTests.m */,
+				94AF160D185E59EE0049E422 /* OSDTmpCacheTests.m */,
 				94E3CA6B185D9AB6000DF159 /* Supporting Files */,
 				94E3CA7F185DA6C5000DF159 /* OSDCacheTestCase.h */,
 				94E3CA80185DA6C5000DF159 /* OSDCacheTestCase.m */,
@@ -240,7 +246,9 @@
 			files = (
 				94E3CA81185DA6C5000DF159 /* OSDCacheTestCase.m in Sources */,
 				94E3CA71185D9AB6000DF159 /* OSDCacheTests.m in Sources */,
+				94E3CA83185E5702000DF159 /* OSDDiskCacheTests.m in Sources */,
 				94E3CA7E185DA66F000DF159 /* OSDMemCacheTests.m in Sources */,
+				94AF160E185E59EE0049E422 /* OSDTmpCacheTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +425,7 @@
 				94E3CA76185D9AB6000DF159 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94E3CA77185D9AB6000DF159 /* Build configuration list for PBXNativeTarget "OSDCacheTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +434,7 @@
 				94E3CA79185D9AB6000DF159 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

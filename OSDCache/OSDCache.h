@@ -47,10 +47,15 @@ OBJC_EXTERN float_t const OSDCacheVersionNumber;
 - (NSString *)keyPathForKeys:(NSArray *)keys;
 
 #pragma mark -
+#pragma mark - Metadata
+- (NSUInteger)objectsInCache;
+
+#pragma mark -
 #pragma mark - Subclass Hooks
 - (id)performReadForKey:(NSString *)key;
 - (BOOL)performWrite:(id)write forKey:(NSString *)key error:(NSError **)error;
 - (BOOL)performDeleteWithKey:(NSString *)key error:(NSError **)error;
+- (void)performCacheClear;
 
 @end
 
