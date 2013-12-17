@@ -124,6 +124,7 @@ OBJC_EXTERN float_t const OSDCacheVersionNumber;
  *  \return The NSString from the cache keys
  */
 - (NSString *)keyPathForKeys:(NSArray *)keys;
+- (NSString *)filePathForKey:(NSString *)key;
 
 #pragma mark -
 #pragma mark - Metadata
@@ -136,6 +137,10 @@ OBJC_EXTERN float_t const OSDCacheVersionNumber;
 - (BOOL)performWrite:(id)write forKey:(NSString *)key error:(NSError **)error;
 - (BOOL)performDeleteWithKey:(NSString *)key error:(NSError **)error;
 - (void)performCacheClear;
+
+#pragma mark -
+#pragma mark - File Path Helpers
+- (void)registerFileExtentions:(NSArray *)fileExtentions;
 
 @end
 

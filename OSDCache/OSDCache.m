@@ -25,6 +25,7 @@ static id _OSDCache_Tmp  = nil;
 @interface OSDCache ()
 
 @property (nonatomic, strong) NSCache *tempMemCache;
+@property (nonatomic, strong) NSMutableSet *fileExtentions;
 
 @end
 
@@ -82,6 +83,12 @@ static id _OSDCache_Tmp  = nil;
         _tempMemCache = [[NSCache alloc] init];
     }
     return _tempMemCache;
+}
+- (NSMutableSet *)fileExtentions {
+    if (!_fileExtentions) {
+        _fileExtentions = [NSMutableSet setWithArray:@[@"pdf",@"png",@"jpg"]];
+    }
+    return _fileExtentions;
 }
 
 #pragma mark -
@@ -187,9 +194,18 @@ static id _OSDCache_Tmp  = nil;
 }
 
 - (NSString *)keyPathForKeys:(NSArray *)keys {
+    NSString *lastKey = [keys lastObject];
+    if ([self.fileExtentions containsObject:lastKey]) {
+        return [[[keys subarrayWithRange:NSMakeRange(0, keys.count - 1)] componentsJoinedByString:@"_"] stringByAppendingPathExtension:lastKey];
+    }
     return [keys componentsJoinedByString:@"_"];
 }
-
+- (NSString *)filePathForKey:(NSString *)key {
+    if (!key.pathExtension) {
+        key = [key stringByAppendingPathExtension:@"dat"];
+    }
+    return [[self cachePath] stringByAppendingPathComponent:key];
+}
 
 - (id)performReadForKey:(NSString *)key {
     [NSException raise:OSDCacheException format:@"Override %s in subclass",__PRETTY_FUNCTION__];
@@ -220,6 +236,12 @@ static id _OSDCache_Tmp  = nil;
     });
 }
 
+#pragma mark -
+#pragma mark - File Path Helpers
+- (void)registerFileExtentions:(NSArray *)fileExtentions {
+    [self.fileExtentions addObjectsFromArray:fileExtentions];
+}
+
 @end
 
 @implementation OSDDiskCache
@@ -234,12 +256,10 @@ static id _OSDCache_Tmp  = nil;
 }
 
 - (id)performReadForKey:(NSString *)key {
-    NSString *path = [[[self cachePath] stringByAppendingPathComponent:key] stringByAppendingPathExtension:@"dat"];
-    return [NSData dataWithContentsOfFile:path];
+    return [NSData dataWithContentsOfFile:[self filePathForKey:key]];
 }
 - (BOOL)performWrite:(id)write forKey:(NSString *)key error:(NSError **)error {
-    NSString *path = [[[self cachePath] stringByAppendingPathComponent:key] stringByAppendingPathExtension:@"dat"];
-    return [write writeToFile:path options:NSDataWritingAtomic error:error];
+    return [write writeToFile:[self filePathForKey:key] options:NSDataWritingAtomic error:error];
 }
 
 - (NSUInteger)objectsInCache {
