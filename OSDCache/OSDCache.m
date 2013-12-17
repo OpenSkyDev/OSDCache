@@ -251,6 +251,8 @@ static id _OSDCache_Tmp  = nil;
         NSError *clearError = nil;
         if (![[NSFileManager defaultManager] removeItemAtPath:[self cachePath] error:&clearError]) {
             NSLog(@"Clear cache error: %@",clearError);
+        } else {
+            [self createCacheDirectoryIfNeeded:NULL];
         }
     }
 }
@@ -283,6 +285,14 @@ static id _OSDCache_Tmp  = nil;
 @end
 
 @implementation OSDTmpCache
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self clear];
+    }
+    return self;
+}
 
 - (NSString *)cachePath {
     static NSString *cachePath = nil;
